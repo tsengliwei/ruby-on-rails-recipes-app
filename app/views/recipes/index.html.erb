@@ -1,8 +1,16 @@
-<p id="notice"><%= notice %></p>
+<%= render 'shared/page_title', title: "All Recipes" %>
+
+<ul class="nav nav-tabs">
+  <li class="active">
+    <%= link_to "Recipes", recipes_path %>
+  </li> 
+  <li>
+    <%= link_to "Chefs", chefs_path %>
+  </li>
+</ul>
 
 <%= will_paginate %>
 
-<%= render 'shared/page_title', title: "All Recipes" %>
 
 <% @recipes.each do |recipe| %>
   <div class="row">
