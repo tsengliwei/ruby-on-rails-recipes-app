@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   
   get '/home', to: 'pages#home'
 
-  resources :chefs, except: [:new]
+  resources :chefs, except: [:new, :destroy]
 
   get '/register', to: 'chefs#new'
 
